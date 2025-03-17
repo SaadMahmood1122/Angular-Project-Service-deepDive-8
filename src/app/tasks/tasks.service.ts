@@ -5,7 +5,9 @@ import { Task } from './task.model';
   providedIn: 'root',
 })
 export class TasksService {
-  task = signal<Task[]>([]);
+  private task = signal<Task[]>([]);
+  // form out side serice it will only read will not able to add task
+  allTask = this.task.asReadonly();
   addTask(taskData: { title: string; description: string }) {
     const newTask: Task = {
       ...taskData,
