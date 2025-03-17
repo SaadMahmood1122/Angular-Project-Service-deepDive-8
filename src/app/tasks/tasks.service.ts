@@ -6,7 +6,7 @@ import { Task } from './task.model';
 })
 export class TasksService {
   task = signal<Task[]>([]);
-  onAddTask(taskData: { title: string; description: string }) {
+  addTask(taskData: { title: string; description: string }) {
     const newTask: Task = {
       ...taskData,
       id: Math.random().toString(),
