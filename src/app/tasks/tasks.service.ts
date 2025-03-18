@@ -1,9 +1,9 @@
 import { Injectable, signal } from '@angular/core';
 import { Task, TaskStatus } from './task.model';
 
-@Injectable({
-  providedIn: 'root',
-})
+// @Injectable({
+//   providedIn: 'root',
+// })
 export class TasksService {
   private task = signal<Task[]>([]);
   // form out side serice it will only read will not able to add task
